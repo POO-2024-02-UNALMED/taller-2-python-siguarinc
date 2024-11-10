@@ -1,29 +1,38 @@
 class Asiento:
     def __init__(self,color,precio, registro):
-        def cambiarColor(self,col):
-            if(col=="rojo"):
-                color=col
+        self.color=color
+        self.precio=precio
+        self.registro=registro
+        def cambiarColor(self,cambiarColor):
+            self.cambiarColor=cambiarColor
+            if(cambiarColor=="rojo"):
+                color=cambiarColor
                 return
-            elif(col=="verde"):
-                color=col
+            elif(cambiarColor=="verde"):
+                color=cambiarColor
                 return
-            elif(col=="Amarillo"):
-                color=col
+            elif(cambiarColor=="Amarillo"):
+                color=cambiarColor
                 return
-            elif(col=="negro"):
-                color=col
+            elif(cambiarColor=="negro"):
+                color=cambiarColor
                 return
-            elif(col=="blanco"):
-                color=col
+            elif(cambiarColor=="blanco"):
+                color=cambiarColor
                 return
             else:
                 return
 
 class Motor:
-    def __init__(numeroCilindro,tipo,registro):
-        def cambiarRegistro(self):
+    def __init__(self,numeroCilindro,tipo,registro):
+        self.numeroCilindro=numeroCilindro
+        self.tipo=tipo
+        self.regristro=registro
+        def cambiarRegistro(self,r):
+            self.registro=r
             return
         def asignarTipo(self,t):
+            self.tipo=t
             if(t=="electrico"):
                 tipo=t
                 return
@@ -35,7 +44,10 @@ class Motor:
     
 class Auto():
     cantidadCreados=""
-    def __init__(modelo,precio,marca):
+    def __init__(self,modelo,precio,marca):
+        self.modelo=modelo
+        self.precio=precio
+        self.marca=marca
         Asiento.registro=[]
         Motor.registro
         def cantidadAsientos():
