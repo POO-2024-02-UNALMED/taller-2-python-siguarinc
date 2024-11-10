@@ -35,7 +35,7 @@ class Auto:
                 contta+=1
         return contta
     def verificarIntegridad(self):
-        for a in self.registro:
+        for a in self.asientos:
             if isinstance(a,Asiento)== True and((a.registro!=self.registro)or(self.registro!=self.motor.registro)):
                 return"Las piezas no son originales"
         return"Auto original"
