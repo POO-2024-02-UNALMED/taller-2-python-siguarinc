@@ -3,42 +3,20 @@ class Asiento:
         self.color=color
         self.precio=precio
         self.registro=registro
-        def cambiarColor(self,col):
-            if(col=="rojo"):
-                self.color=col
-                return
-            elif(col=="verde"):
-                self.color=col
-                return
-            elif(col=="Amarillo"):
-                self.color=col
-                return
-            elif(col=="negro"):
-                self.color=col
-                return
-            elif(col=="blanco"):
-                self.color=col
-                return
-            else:
-                return
 
+    def cambiarColor(self,col):
+        if(col=="rojo" or col=="verde" or col=="Amarillo" or col=="negro" or col=="blanco"):
+            self.color=col
 class Motor:
     def __init__(self,numeroCilindro,tipo,registro):
         self.numeroCilindro=numeroCilindro
         self.tipo=tipo
         self.regristro=registro
-        def cambiarRegistro(self,r):
-            self.registro=r
-            return
-        def asignarTipo(self,t):
-            if(t=="electrico"):
-                self.tipo=t
-                return
-            elif(t=="gasolina"):
-                self.tipo=t
-                return
-            else:
-                return
+    def cambiarRegistro(self,r):
+        self.registro=r
+    def asignarTipo(self,t):
+        if(t=="electrico" or t=="gasolina"):
+            self.tipo=t
     
 class Auto:
     cantidadCreados=0
@@ -50,15 +28,15 @@ class Auto:
         self.motor=motor
         self.registro=registro
         
-        def cantidadAsientos(self):
-            contta=0
-            for a in asientos:
-                if (isinstance(a,Asiento)):
-                    contta+=1
-            return contta
-        def verificarIntegridad(self):
-            for a in self.registro:
-                if isinstance(a,Asiento)== True and((a.registro!=self.registro)or(self.registro!=registro)):
-                    return"Las piezas no son originales"
-            return"Auto original"
+    def cantidadAsientos(self):
+        contta=0
+        for a in self.asientos:
+            if (isinstance(a,Asiento)):
+                contta+=1
+        return contta
+    def verificarIntegridad(self):
+        for a in self.registro:
+            if isinstance(a,Asiento)== True and((a.registro!=self.registro)or(self.registro!=self.motor.registro)):
+                return"Las piezas no son originales"
+        return"Auto original"
 
