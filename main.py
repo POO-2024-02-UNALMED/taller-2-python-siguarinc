@@ -11,7 +11,7 @@ class Motor:
     def __init__(self,numeroCilindro,tipo,registro):
         self.numeroCilindro=numeroCilindro
         self.tipo=tipo
-        self.regristro=registro
+        self.registro=registro
     def cambiarRegistro(self,r):
         self.registro=r
     def asignarTipo(self,t):
@@ -36,7 +36,7 @@ class Auto:
         return contta
     def verificarIntegridad(self):
         for a in self.asientos:
-            if isinstance(a,Asiento)== True and((a.registro!=self.registro)or(self.registro!=self.motor.registro)):
+            if isinstance(a,Asiento)== True and(self.registro != a.registro or a.registro != self.motor.registro):
                 return"Las piezas no son originales"
         return"Auto original"
 
