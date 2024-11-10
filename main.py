@@ -3,22 +3,21 @@ class Asiento:
         self.color=color
         self.precio=precio
         self.registro=registro
-        def cambiarColor(self,cambiarColor):
-            self.cambiarColor=cambiarColor
-            if(cambiarColor=="rojo"):
-                color=cambiarColor
+        def cambiarColor(self,col):
+            if(col=="rojo"):
+                self.color=col
                 return
-            elif(cambiarColor=="verde"):
-                color=cambiarColor
+            elif(col=="verde"):
+                self.color=col
                 return
-            elif(cambiarColor=="Amarillo"):
-                color=cambiarColor
+            elif(col=="Amarillo"):
+                self.color=col
                 return
-            elif(cambiarColor=="negro"):
-                color=cambiarColor
+            elif(col=="negro"):
+                self.color=col
                 return
-            elif(cambiarColor=="blanco"):
-                color=cambiarColor
+            elif(col=="blanco"):
+                self.color=col
                 return
             else:
                 return
@@ -32,12 +31,11 @@ class Motor:
             self.registro=r
             return
         def asignarTipo(self,t):
-            self.tipo=t
             if(t=="electrico"):
-                tipo=t
+                self.tipo=t
                 return
             elif(t=="gasolina"):
-                tipo=t
+                self.tipo=t
                 return
             else:
                 return
